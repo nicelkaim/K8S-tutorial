@@ -8,9 +8,9 @@
 #}
 
 provider "google" {
-  credentials = file("elkaim-function-5026a4c91cc7.json")
+  credentials = file("")
 
-  project = "elkaim-function"
+  project = ""
   region  = "us-central1"
   zone    = "us-central1-c"
 }
