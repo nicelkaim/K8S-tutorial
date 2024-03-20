@@ -1,6 +1,6 @@
 resource "google_container_cluster" "unicron" {
   name     = "unicron"
-  location = "us-central1"
+  location = "us-central1-a"
   initial_node_count       = 2
   private_cluster_config {
     enable_private_endpoint = true
@@ -11,7 +11,8 @@ resource "google_container_cluster" "unicron" {
     cidr_blocks {
       cidr_block   = "10.0.0.7/32"
       display_name = "net1"
-    gcp_public_cidrs_access_enabled = true
+    }
+#    gcp_public_cidrs_access_enabled = true
   }
 #google_compute_address.bastionstatic.address
 }

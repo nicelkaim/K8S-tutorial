@@ -1,3 +1,8 @@
+resource "google_compute_network" "hipponet" {
+  name                    = "hipponet"
+  auto_create_subnetworks = false
+}
+
 resource "google_compute_subnetwork" "hipposubnet" {
   name = "hipposubnet"
   ip_cidr_range = "12.0.0.0/24"
@@ -7,10 +12,6 @@ resource "google_compute_subnetwork" "hipposubnet" {
     range_name    = "hipposubnet-secondary-range"
     ip_cidr_range = "12.10.0.0/23"
   }
-}
-resource "google_compute_network" "hipponet" {
-  name                    = "hipponet"
-  auto_create_subnetworks = false
 }
 
 resource "google_container_cluster" "hippo" {

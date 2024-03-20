@@ -8,24 +8,9 @@
 #}
 
 provider "google" {
-  credentials = file("SERVICE ACCOUNT JSON KEY FILE HERE")
+  credentials = file("elkaim-function-5026a4c91cc7.json")
 
-  project = "YOUR PROJECT"
+  project = "elkaim-function"
   region  = "us-central1"
   zone    = "us-central1-c"
-}
-
-resource "google_compute_network" "terraform-network" {
-  name = "terraform-network"
-}
-
-resource "google_compute_subnetwork" "terrafom-subnet" {
-  name          = "terraform-subnet"
-  ip_cidr_range = "10.0.0.0/8"
-  region        = "us-central1"
-  network       = google_compute_network.terraform-network.name
-  secondary_ip_range {
-    range_name    = "tf-test-secondary-range-update1"
-    ip_cidr_range = "192.168.10.0/24"
-  }
 }
