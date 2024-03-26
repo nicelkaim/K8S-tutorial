@@ -8,9 +8,9 @@
 #}
 
 provider "google" {
-  credentials = file("REPLACE/WITH/JSONFILEPATH")
+  credentials = file("key.json")
 
-  project = "REPLACE_WITH_PROJECTID"
+  project = "$GOOGLE_CLOUD_PROJECT"
   region  = "us-central1"
   zone    = "us-central1-c"
 }
