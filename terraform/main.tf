@@ -8,9 +8,9 @@
 #}
 
 provider "google" {
-  credentials = file("")
+  credentials = file("REPLACE/WITH/JSONFILEPATH")
 
-  project = ""
+  project = "REPLACE_WITH_PROJECTID"
   region  = "us-central1"
   zone    = "us-central1-c"
 }
