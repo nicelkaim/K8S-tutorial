@@ -70,55 +70,55 @@ spec:
 ---
 
 apiVersion: apps/v1
-kind: Deployemnt
+kind: Deployment
 metadata:
   name: working
   namespace: working
   labels:
     app: working
-    version: 1.0
+    version: "1.0"
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: working
-      version: 1.0
+      version: "1.0"
   template:
     metadata:
       labels:
         app: working
-        version: 1.0
+        version: "1.0"
     spec:
       containers:
       - name: working
         image: jazzdd/apine-flask-python3
         ports:
         - containerPort: 80
-        readinessprobe:
+        readinessProbe:
           httpGet:
             path: /probe/ready
             port: 80
 ---
 
 apiVersion: apps/v1
-kind: Deployemnt
+kind: Deployment
 metadata:
   name: working1
   namespace: working
   labels:
     app: working
-    version: 1.1
+    version: "1.1"
 spec:
   selector:
     matchLabels:
       app: working
-      version: 1.1
+      version: "1.1"
   replicas: 2
   template:
     metadata:
       labels:
         app: working
-        version: 1.1
+        version: "1.1"
     spec:
       containers:
       - name: working
@@ -129,7 +129,6 @@ spec:
           httpGet:
             path: /
             port: 80
-
 ---
 
 apiVersion: v1
