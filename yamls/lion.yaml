@@ -15,7 +15,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bigapp
+  name: bigjob
   namespace: bigpods
 spec:
   replicas: 5
