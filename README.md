@@ -11,4 +11,4 @@ Step 2: gcloud iam service-accounts keys create key.json --iam-account=IAM-ACCOU
 
   Note: Your SA needs IAM permissions to create GKE clusters and workloads, VPC networks, and GCE Instances
   
-Step 3: chmod 777 install.sh && ./install.sh
+Step 3: chmod 777 install.sh && ./../yamls/deploy.sh
