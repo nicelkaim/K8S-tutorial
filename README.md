@@ -2,9 +2,12 @@ Under Contruction
 
 Questions: https://github.com/pwolthausen/k8s-workshops/blob/master/7-live-debugging/Questions.md
 
-### Instructions
+### Before you begin
+* All Steps should be taken in Cloud Shell, as git, terraform, and important env var are preinstalled
 
-All Steps should be taken in Cloud Shell, as git, terraform, and important env var are preinstalled
+* You will need a Google Cloud Service Account with IAM permissions to create GKE clusters and workloads, VPC networks, and GCE Instances
+
+### Instructions
 
 Step 1: 
 
@@ -15,8 +18,6 @@ Step 1:
 Step 2: 
 
     gcloud iam service-accounts keys create key.json --iam-account=IAM-ACCOUNT-EMAIL-TO-USE
-
- Note: Your SA needs IAM permissions to create GKE clusters and workloads, VPC networks, and GCE Instances
   
 Step 3: 
 
