@@ -2,6 +2,9 @@ Under Contruction
 
 Questions: https://github.com/pwolthausen/k8s-workshops/blob/master/7-live-debugging/Questions.md
 
+### Instructions
+
+All Steps should be taken in Cloud Shell, as git, terraform, and important env var are preinstalled
 
 Step 1: git clone https://github.com/nicelkaim/K8S-tutorial && chmod 777 K8S-tutorial/yamls/deploy.sh && cd K8S-tutorial/terraform
 
