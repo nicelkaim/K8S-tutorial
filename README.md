@@ -21,4 +21,4 @@ Step 2:
   
 Step 3: 
 
-    chmod 777 install.sh && ./../yamls/deploy.sh
+    chmod 777 install.sh && ./install.sh
