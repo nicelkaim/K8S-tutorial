@@ -1,11 +1,13 @@
-Under Contruction
+Updated Questions and Resources for modern GCP
 
-Questions: https://github.com/pwolthausen/k8s-workshops/blob/master/7-live-debugging/Questions.md
+Original Lab by pwolthausen/ https://github.com/pwolthausen/k8s-workshops/tree/master
 
 ### Before you begin
 * All Steps should be taken in Cloud Shell, as git, terraform, and important env var are preinstalled
 
 * You will need a Google Cloud Service Account with IAM permissions to create GKE clusters and workloads, VPC networks, and GCE Instances
+
+* You will need to edit main.tf to include the name of your GCP project in the `project` field
 
 ### Instructions
 
