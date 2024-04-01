@@ -88,14 +88,15 @@ spec:
         app: loner
     spec:
       affinity:
-        nodeAffinity:
+        podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: topology.kubernetes.io/hostname
+          - labelSelector:
+              matchExpressions:
+              - key: app
                 operator: In
                 values:
                 - loner
+            topologyKey: kubernetes.io/hostname
       containers:
       - name: the-beatles
         image: nginx
